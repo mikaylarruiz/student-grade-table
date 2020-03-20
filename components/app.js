@@ -7,7 +7,7 @@ class App {
     console.error(error);
   }
   handleGetGradesSuccess(grades){
-    console.log(grades);
+    gradeTable.updateGrades(grades)
   }
   getGrades(){
     $.ajax({
