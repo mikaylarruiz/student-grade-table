@@ -1,15 +1,23 @@
 class App {
   constructor(gradeTable, pageHeader) {
-    this.gradeTable = gradeTable;
-    this.pageHeader = pageHeader;
     this.handleGetGradesError = this.handleGetGradesError.bind(this);
     this.handleGetGradesSuccess = this.handleGetGradesSuccess.bind(this);
+    this.gradeTable = gradeTable;
+    this.pageHeader = pageHeader;
   }
   handleGetGradesError(error){
     console.error(error);
   }
   handleGetGradesSuccess(grades){
-    this.gradeTable.updateGrades(grades)
+    var sumGrades = 0;
+    var averageGrades = null;
+    for (var i = 0; i < grades.length; i++){
+      sumGrades += grades[i]
+    }
+    averageGrades = sumGrades/grades.length;
+    this.gradeTable.updateGrades(grades);
+    this.gradeTable.updateGrades(averageGrades);
+    console.log(averageGrades)
   }
   getGrades(){
     $.ajax({
