@@ -1,0 +1,12 @@
+body {
+  margin: 2rem;
+}
+tr:nth-child(odd) {
+  background-color: rgb(232, 230, 230);
+}
+th {
+  background-color: white;
+}
+.badge {
+  background-color: lightgray;
+}

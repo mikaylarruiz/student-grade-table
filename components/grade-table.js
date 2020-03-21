@@ -4,6 +4,7 @@ class GradeTable {
     this.gradeTable = gradeTable;
   }
   updateGrades(grades){
+    console.log(grades)
     var tBody = this.tableElement.querySelector("tbody");
     while (tBody.firstChild) {
       tBody.removeChild(tBody.firstChild);
@@ -22,7 +23,7 @@ class GradeTable {
       tr.appendChild(course);
       tr.appendChild(grade);
       tBody.appendChild(tr);
-      console.log(grades);
+
     }
   }
 }
