@@ -6,4 +6,3 @@ var pageHeader = new PageHeader(header);
 
 var app = new App(gradeTable, pageHeader);
 app.start();
-console.log(app);

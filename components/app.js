@@ -9,15 +9,13 @@ class App {
     console.error(error);
   }
   handleGetGradesSuccess(grades){
-    var sumGrades = 0;
-    var averageGrades = null;
-    for (var i = 0; i < grades.length; i++){
-      sumGrades += grades[i]
+    var average = 0;
+    for( var i = 0; i < grades.length; i++){
+      average += grades[i].grade;
     }
-    averageGrades = sumGrades/grades.length;
+    var gradeAverage = average/grades.length;
+    this.pageHeader.updateAverage(gradeAverage);
     this.gradeTable.updateGrades(grades);
-    this.gradeTable.updateGrades(averageGrades);
-    console.log(averageGrades)
   }
   getGrades(){
     $.ajax({
