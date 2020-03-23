@@ -23,7 +23,6 @@ class GradeTable {
       tr.appendChild(course);
       tr.appendChild(grade);
       tBody.appendChild(tr);
-
     }
   }
 }
