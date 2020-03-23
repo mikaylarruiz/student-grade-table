@@ -6,27 +6,57 @@
   <title>Student Grade Table</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 </head>
 <body>
   <header class="row align-items-end mt-4 mb-4">
     <h1>Student Grade Table</h1>
     <h4 class="col text-right">Average Grade <span class="badge badge-primary"></span></h4>
-    </header>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Student Name</th>
-        <th scope="col">Course</th>
-        <th scope="col">Grade</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
+  </header>
+  <div>
+    <table class="table col-8">
+      <thead>
+        <tr>
+          <th scope="col">Student Name</th>
+          <th scope="col">Course</th>
+          <th scope="col">Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+      </table>
+
+    <div class="col-4">
+      <form class=" pr-0">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-user"></i></span>
+          </div>
+          <input name="name" type="text" class="form-control" placeholder="Student Name" aria-label="Student's Name">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="far fa-list-alt"></i></span>
+          </div>
+          <input name="course" type="text" class="form-control" placeholder="Student Course" aria-label="Student's Course">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-graduation-cap"></i></span>
+          </div>
+          <input name="grade" type="number" class="form-control" placeholder="Student Grade" aria-label="Student's Grade">
+        </div>
+        <button type="submit" class="btn btn-success mr-2">Add</button>
+        <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+      </form>
+    </div>
+
+  </div>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="../student-grade-table/components/app.js"></script>
   <script src="../student-grade-table/components/grade-table.js"></script>
   <script src="../student-grade-table/components/page-header.js"></script>
+  <script src="../student-grade-table/components/grade-form.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
