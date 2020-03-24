@@ -12,8 +12,10 @@ th {
 }
 div {
   display:flex;
-  flex-wrap: wrap;
 }
 form {
-  padding-left: 2rem;
+  padding: 1.5rem;
+}
+.delete-button {
+  border-radius: 5px;;
 }
